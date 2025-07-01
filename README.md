@@ -1,3 +1,6 @@
+# AI-Learning-Assistant
+This is an AI learning assistant that can help you summarize notes,answer questions,and test your mastery.
+
 ## 🚀 如何运行
 
 ### 1. 前提条件
