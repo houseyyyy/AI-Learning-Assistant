@@ -1,0 +1,13 @@
+# config.py
+import os
+from dotenv import load_dotenv
+
+# 加载 .env 文件中的环境变量
+load_dotenv(override=True)
+
+DIFY_API_KEY = os.getenv("DIFY_API_KEY")
+DOUBAO_APP_ID=os.getenv("DOUBAO_APP_ID")
+DOUBAO_TOKEN=os.getenv("DOUBAO_TOKEN")
+
+if not(DIFY_API_KEY or DOUBAO_TOKEN or DOUBAO_APP_ID):
+    raise ValueError("错误：请在 .env 文件中正确设置")
