@@ -40,7 +40,12 @@ This is an AI learning assistant that can help you summarize notes,answer questi
     ```bash
     pip install -r requirements.txt
     ```
+4. **替换api**
+    替换`.env`里的api,具体可以参考
 
+    [1.doubao](https://www.volcengine.com/docs/6561/1354868)
+
+    [2.deepseek](https://api-docs.deepseek.com/zh-cn/)
 ### 3. 启动Web应用
 
 在您的命令行终端中，运行以下命令：
