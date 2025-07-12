@@ -155,5 +155,34 @@ def extract_transcript_text(api_response: dict) -> str:
         raise Exception("无法解析API响应")
 
 # 下面是测试模块功能
-# transcript = transcribe_single_audio_chunk("audio.m4a","2958001866","Vv1BBcvq5D-pFrgA76_OR-oXmsK3MJ5t")
-# print(transcript)
+
+# import concurrent.futures
+
+# def process_audio_chunk(filename, param1, param2):
+#     return transcribe_single_audio_chunk(filename, param1, param2)
+
+# audio_files = [
+#     "output_chunks/chunk_001.mp3",
+#     "output_chunks/chunk_002.mp3",
+#     "output_chunks/chunk_003.mp3",
+#     "output_chunks/chunk_004.mp3",
+#     "output_chunks/chunk_005.mp3",
+# ]
+
+# common_params = ("2958001866", "Vv1BBcvq5D-pFrgA76_OR-oXmsK3MJ5t")
+
+# with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+#     # 提交所有音频文件进行并行处理
+#     future_to_file = {
+#         executor.submit(process_audio_chunk, file, *common_params): file
+#         for file in audio_files
+#     }
+    
+#     # 收集并打印结果（按完成顺序）
+#     for future in concurrent.futures.as_completed(future_to_file):
+#         file = future_to_file[future]
+#         try:
+#             transcript = future.result()
+#             print(f"Transcript for {file}: {transcript}")
+#         except Exception as e:
+#             print(f"Error processing {file}: {e}")
